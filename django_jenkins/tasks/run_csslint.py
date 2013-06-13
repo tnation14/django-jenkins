@@ -88,7 +88,7 @@ class Task(BaseTask):
                 raise CalledProcessError(retcode, cmd,
                                          output=output + '\n' + err)
 
-            self.output.write(output.decode('utf-8'))
+            self.output.write(output)
         elif self.to_file:
             self.output.write('<?xml version="1.0" encoding='
                               '"utf-8"?><lint></lint>')
