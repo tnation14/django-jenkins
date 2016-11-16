@@ -35,7 +35,7 @@ setup(
     ],
     install_requires=[
         'Django>=1.3',
-        'coverage>=3.4',
+        'coverage>=4.0',
         'pylint>=0.23',
     ],
     packages = ['django_jenkins', 'django_jenkins.management', 'django_jenkins.tasks', 'django_jenkins.management.commands'],
