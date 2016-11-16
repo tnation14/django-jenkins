@@ -2,7 +2,7 @@
 # pylint: disable=W0201
 import os
 from optparse import make_option
-from coverage.control import coverage
+from coverage.control import Coverage as coverage
 from django.conf import settings
 from django.utils.importlib import import_module
 from django_jenkins.tasks import BaseTask, get_apps_under_test
