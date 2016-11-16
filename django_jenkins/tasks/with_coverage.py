@@ -2,7 +2,7 @@
 # pylint: disable=W0201
 import os
 from optparse import make_option
-from coverage.control import coverage
+from coverage.control import Coverage
 from django.conf import settings
 from django.utils.importlib import import_module
 from django_jenkins.tasks import BaseTask, get_apps_under_test
@@ -66,7 +66,7 @@ class Task(BaseTask):
                         getattr(settings, 'COVERAGE_EXCLUDES_FOLDERS', []))
         #import ipdb; ipdb.set_trace()
 
-        self.coverage = coverage(branch=self.branch,
+        self.coverage = Coverage(branch=self.branch,
                                  source=self.test_apps,
                                  omit=self.exclude_locations,
                                  config_file=options.get('coverage_rcfile') or
